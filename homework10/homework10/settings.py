@@ -77,11 +77,14 @@ WSGI_APPLICATION = "homework10.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "hw10",
+        "USER": "postgres",
+        "PASSWORD": "2610",
+        "HOST": "localhost",  # Або IP адреса вашого сервера PostgreSQL
+        "PORT": "5432",  # Порт, на якому працює PostgreSQL (зазвичай 5432)
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
