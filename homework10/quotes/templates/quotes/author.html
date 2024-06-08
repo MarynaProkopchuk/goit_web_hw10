@@ -1,0 +1,28 @@
+{% extends 'quotes/base.html' %}
+{% load extract %}
+
+{% block content %}
+
+
+<div class="author-details">
+    <h3 class="author-title">{{author.fullname}}</h3>
+    <p><strong>Born:</strong> <span class="author-born-date">{{author.born_date}}</span> <span class="author-born-location">{{author.born_location}}</span></p>
+    <p><strong>Description:</strong></p>
+    <div class="author-description">
+        {{author.description}}
+    </div>
+</div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="zyte">❤</span> by <a class="zyte" href="https://www.zyte.com">Zyte</a>
+            </p>
+        </div>
+    </footer>
+
+
+{% endblock %}
