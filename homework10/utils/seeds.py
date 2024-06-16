@@ -4,7 +4,7 @@ import json
 
 connect(
     db="home_work10",
-    host="mongodb+srv://user01:26100510@cluster0.yzrztho.mongodb.net/?retryWrites=true&w=majority",
+    host="mongodb+srv://************@cluster0.yzrztho.mongodb.net/?retryWrites=true&w=majority",
 )
 
 
