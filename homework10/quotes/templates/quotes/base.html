@@ -23,12 +23,18 @@
         </div>
         <div class="col-md-4">
             <p>
-                <a href="{% url 'users:signup' %}" class="btn btn-info">Signup</a>
-                <a href="{% url 'users:signin' %}" class="btn btn-primary">Login</a>
-                 <form id="logout-form" method="post" action="{% url 'users:logout' %}" style="display:inline;">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'quotes:add_author' %}" class="btn btn-success">Add author</a>
+                    <a href="{% url 'quotes:add_quote' %}" class="btn btn-success">Add quote</a>
+                    <form id="logout-form" method="post" action="{% url 'users:logout' %}" style="display:inline;">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-warning">Logout</button>
                 </form>
+                {% else %}
+                <a href="{% url 'users:signup' %}" class="btn btn-info">Signup</a>
+                <a href="{% url 'users:signin' %}" class="btn btn-primary">Login</a>
+
+               {% endif %}
             </p>
         </div>
     </div>
